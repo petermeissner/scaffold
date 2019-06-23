@@ -1,29 +1,86 @@
+#### Description ###########################################
+
+# Script with definition of UI function
+#
+
+
+
+
+#### Startup Logging #######################################
+
+cat("ui     loaded at ", as.character(Sys.time()), "\n")
+
+
+
+
+#### Packages ##############################################
+
 library(shiny)
 library(shinymaterial)
 
 
-# Wrap shinymaterial apps in material_page
-ui <- material_page(
-  title = "Basic Page + Side-Nav + Tabs",
-  # Place side-nav in the beginning of the UI
-  material_side_nav(
-    fixed = FALSE,
-    tags$h3("Side-Nav Content")
-  ),
-  # Define tabs
-  material_tabs(
-    tabs = c(
-      "First Tab" = "first_tab",
-      "Second Tab" = "second_tab"
+
+
+#### UI function ###########################################
+
+
+ui <-
+  material_page(
+    title =
+      tags$span(
+        tags$img(
+          src   = "img/rlogo.svg",
+          style = "vertical-align:middle; height: 1.7em; margin-right: 1em;"
+        ),
+        "App-Title"
+      ),
+    include_fonts = FALSE,
+    include_icons = FALSE,
+    nav_bar_fixed = FALSE,
+    nav_bar_color = "black",
+    background_color = "grey lighten-4",
+
+
+    # Icludes ##############################################
+
+    tags$head(
+      tags$link(
+        rel  = "stylesheet",
+        type = "text/css",
+        href = "style.css"
+      ),
+      tags$script(src = "javascript.js")
+    ),
+
+
+
+    # Sidebar ##############################################
+
+    material_side_nav(
+      tags$h3("Menu", style="text-align: center;"),
+      material_side_nav_tabs(
+        side_nav_tabs =
+          c(
+          "Tab 1" = "tab_1",
+          "Tab 2" = "tab_2"
+          ),
+        icons = c("cast", "insert_chart")
+      )
+    ),
+
+
+
+    # Tab 1 ################################################
+
+    material_side_nav_tab_content(
+      side_nav_tab_id = "tab_1"
+    ),
+
+
+
+    # Tab 2 ################################################
+
+    material_side_nav_tab_content(
+      side_nav_tab_id = "tab_2"
     )
-  ),
-  # Define tab content
-  material_tab_content(
-    tab_id = "first_tab",
-    tags$h1("First Tab Content")
-  ),
-  material_tab_content(
-    tab_id = "second_tab",
-    tags$h1("Second Tab Content")
   )
-)

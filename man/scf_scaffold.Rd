@@ -10,7 +10,17 @@ scf_scaffold(scf, path_to = NULL, package = "scaffold")
 \item{scf}{path to scaffold from}
 
 \item{path_to}{path to scaffold to}
+
+\item{package}{the package to look for the scaffolding}
 }
 \description{
 general scaffolding function
+}
+\examples{
+\dontrun{
+
+scf_scaffold("shiny_material", path_to = ".")
+
+}
+
 }

@@ -9,7 +9,6 @@
 #' Copies files from package's inst folder to path.
 #' @export
 #'
-#' @examples
 scf_copy_files <-
   function(..., path = "."){
     paths <-

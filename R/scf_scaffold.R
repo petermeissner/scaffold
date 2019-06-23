@@ -2,10 +2,16 @@
 #'
 #' @param scf path to scaffold from
 #' @param path_to path to scaffold to
+#' @param package the package to look for the scaffolding
 #'
 #' @export
 #'
-#' @examples
+#' @examples \dontrun{
+#'
+#' scf_scaffold("shiny_material", path_to = ".")
+#'
+#' }
+#'
 scf_scaffold <-
   function(scf, path_to = NULL, package = "scaffold"){
     if ( is.null(path_to) ){
