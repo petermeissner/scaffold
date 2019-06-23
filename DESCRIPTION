@@ -1,14 +1,15 @@
 Package: scaffold
-Type: Package
-Title: What the Package Does (Title Case)
+Title: Scaffolding and Skeletton Framework
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Authors@R: 
+    person(given = "Peter",
+           family = "Meissner",
+           role = c("aut", "cre"),
+           email = "retep.meissner@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0001-6501-1841"))
+Description: Scaffold is a framework to easily build up file and folder skelletons 
+    for various use case - e.g. Shiny apps, packages and the like. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-Imports: 
-    fs
 RoxygenNote: 6.1.1
