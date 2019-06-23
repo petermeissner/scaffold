@@ -9,11 +9,5 @@
 #'
 scf_shiny_material <-
   function(path = "./shinyapp"){
-    fs::dir_create(path = path, recurse = TRUE)
-    scf_copy_files(
-      "shiny_material/server.R",
-      "shiny_material/ui.R",
-      "shiny_material/global.R",
-      path = path
-    )
+    scf_scaffold(scf = "shiny_material", path_to = path)
   }

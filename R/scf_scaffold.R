@@ -19,14 +19,16 @@ scf_scaffold <-
     }
 
     pkg_path <- system.file(package = package)
-    scf_path <- fs::path(pkg_path, scf)
+    scf_path <- fs::path(pkg_path, "scaffold", scf)
 
-    files <- fs::dir_ls(scf_path)
+    files <- list.files(scf_path, recursive = TRUE)
 
-    fs::dir_create(path_to)
+    paths_from <- fs::path(scf_path, files)
+    paths_to   <- fs::path(path_to,  files)
 
+    fs::dir_create(fs::path_dir(paths_to), recurse = TRUE)
     fs::file_copy(
-      path     = files,
-      new_path = gsub("/*$", "/", path_to)
+      path     = paths_from,
+      new_path = paths_to
     )
   }
