@@ -7,8 +7,17 @@ Authors@R:
            role = c("aut", "cre"),
            email = "retep.meissner@gmail.com",
            comment = c(ORCID = "https://orcid.org/0000-0001-6501-1841"))
-Description: Scaffold is a framework to easily build up file and folder skelletons 
-    for various use case - e.g. Shiny apps, packages and the like. 
+Description: Having file and folder structures as templates 
+    for projects, packages, Shiny apps, ... is a common 
+    pattern found e.g. among programmers, statisticianc, data 
+    scientists, and practitioners. `{scaffold}` is a framework 
+    to easily build up file and folder skelletons. By 
+    providing and easy and consistent way to copy files and 
+    folders from template folder in the local files system or
+    installed in a package. Furthermore `{scaffold}` allows 
+    for a templating function that can transform general 
+    templating files into specific - filled out - files 
+    and folders. 
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
