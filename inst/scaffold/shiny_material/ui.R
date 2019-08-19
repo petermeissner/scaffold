@@ -34,8 +34,8 @@ ui <-
         ),
         "App-Title"
       ),
-    include_fonts = FALSE,
-    include_icons = FALSE,
+    include_fonts = TRUE,
+    include_icons = TRUE,
     nav_bar_fixed = FALSE,
     nav_bar_color = "black",
     background_color = "grey lighten-4",
