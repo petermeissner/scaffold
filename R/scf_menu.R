@@ -20,7 +20,7 @@ scf_menu <-
       if ( length(choices[[i]]) > 0 ){
 
         # normal choices
-        choosen[[i]] <- menu(choices = choices[[i]])
+        choosen[[i]] <- utils::menu(choices = choices[[i]])
 
       } else {
 
