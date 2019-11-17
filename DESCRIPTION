@@ -26,3 +26,5 @@ RoxygenNote: 6.1.1
 Imports: 
     utils,
     fs
+Suggests: 
+    covr

@@ -13,7 +13,9 @@
 #' }
 #'
 scf_scaffold <-
-  function(scf, path_to = NULL, package = "scaffold"){
+  function(scf, path_to = NULL, package = "scaffold", overwrite = FALSE){
+
+    # check path
     if ( is.null(path_to) ){
       path_to <- basename(scf)
     }
@@ -28,7 +30,8 @@ scf_scaffold <-
 
     fs::dir_create(fs::path_dir(paths_to), recurse = TRUE)
     fs::file_copy(
-      path     = paths_from,
-      new_path = paths_to
+      path      = paths_from,
+      new_path  = paths_to,
+      overwrite = overwrite
     )
   }
