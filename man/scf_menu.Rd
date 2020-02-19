@@ -4,7 +4,8 @@
 \alias{scf_menu}
 \title{scf_menu}
 \usage{
-scf_menu(..., .fun = function(...) { })
+scf_menu(..., .fun = function(...) {
+})
 }
 \arguments{
 \item{...}{list of choices and inputs}

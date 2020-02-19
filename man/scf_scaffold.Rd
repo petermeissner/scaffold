@@ -4,8 +4,7 @@
 \alias{scf_scaffold}
 \title{general scaffolding function}
 \usage{
-scf_scaffold(scf, path_to = NULL, package = "scaffold",
-  overwrite = FALSE)
+scf_scaffold(scf, path_to = NULL, package = "scaffold", overwrite = FALSE)
 }
 \arguments{
 \item{scf}{path to scaffold from}

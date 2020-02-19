@@ -1,7 +1,7 @@
 Package: scaffold
 Title: Scaffolding and Skeletton Framework
-Version: 0.1.0
-Date: 2019-09-21
+Version: 0.1.1
+Date: 2020-02-19
 Authors@R: 
     person(given = "Peter",
            family = "Meissner",
@@ -22,7 +22,7 @@ Description: Having file and folder structures as templates
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 6.1.1
+RoxygenNote: 7.0.2
 Imports: 
     utils,
     fs
